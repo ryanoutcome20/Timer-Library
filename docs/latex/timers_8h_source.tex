@@ -1,0 +1,31 @@
+\doxysection{timers.\+h}
+\hypertarget{timers_8h_source}{}\label{timers_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{//\ Object\ that\ will\ be\ called\ when\ the\ timer\ completes.\ Used\ for\ restarting.}}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{void}*\ object;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Time\ when\ the\ timer\ was\ started\ or\ continued.}}
+\DoxyCodeLine{00009\ \ \ \ \ clock\_t\ start\_time;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Delay\ between\ iterations.}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ delay;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Iterations\ that\ we\ should\ call\ the\ object.}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ iterations;}
+\DoxyCodeLine{00016\ \}\ \mbox{\hyperlink{struct_timer}{Timer}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ Basic\ Operations}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00031\ \mbox{\hyperlink{struct_timer}{Timer}}\ TCreate(\textcolor{keywordtype}{float}\ delay,\ \textcolor{keywordtype}{int}\ iterations,\ \textcolor{keywordtype}{void}\ (*callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00042\ \mbox{\hyperlink{struct_timer}{Timer}}\ TSimple(\textcolor{keywordtype}{float}\ delay,\ \textcolor{keywordtype}{void}\ (*callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ Utility\ Operations}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00053\ \mbox{\hyperlink{struct_timer}{Timer}}\ TRestart(\mbox{\hyperlink{struct_timer}{Timer}}\ \textcolor{keywordtype}{object});}
+
+\end{DoxyCode}
