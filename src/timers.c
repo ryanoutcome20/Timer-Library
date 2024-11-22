@@ -9,7 +9,7 @@ Timer TCreate(float delay, int iterations, void (*callback)(void))
         .iterations = iterations,
         .delay = delay * CLOCKS_PER_SEC,
 
-        .start_time = 0,
+        .start_time = 0
     };
 
     // This isn't a perfect solution since it'll take up a single CPU thread while we wait
